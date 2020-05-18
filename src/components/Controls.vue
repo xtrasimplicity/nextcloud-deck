@@ -204,6 +204,12 @@ export default {
 		}
 	},
 
+	created: function() {
+		if (localStorage.getItem('deck.compactMode') === 'true') {
+			this.toggleCompactMode()
+		}
+	  },
+
 	computed: {
 		...mapGetters([
 			'canEdit',

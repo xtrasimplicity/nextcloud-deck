@@ -176,6 +176,7 @@ export default new Vuex.Store({
 		},
 		toggleCompactMode(state) {
 			state.compactMode = !state.compactMode
+			localStorage.setItem('deck.compactMode', state.compactMode)
 		},
 		setBoards(state, boards) {
 			state.boards = boards
